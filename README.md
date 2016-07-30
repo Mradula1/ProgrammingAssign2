@@ -26,9 +26,8 @@ really a list containing a function to
 2.  get the value of the vector
 3.  set the value of the mean
 4.  get the value of the mean
-
-
-    makeVector <- function(x = numeric()) {
+  
+        makeVector <- function(x = numeric()) {
             m <- NULL
             set <- function(y) {
                     x <<- y
@@ -40,7 +39,7 @@ really a list containing a function to
             list(set = set, get = get,
                  setmean = setmean,
                  getmean = getmean)
-    }
+          }
 
 The following function calculates the mean of the special "vector"
 created with the above function. However, it first checks to see if the
