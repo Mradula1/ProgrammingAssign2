@@ -1,3 +1,5 @@
+# Name: Mradula Singh
+# Work: Coursera R programming Assignment-02
 ## Programming Assignment 02: Caching the Inverse of a Matrix
 
 ## Matrix inversion is usually a costly computation and there may be some benefit to caching the inverse of a matrix rather than
