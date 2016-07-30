@@ -63,52 +63,51 @@ Grading
 This assignment will be graded via peer assessment.
 
 The following code demonstrates how to use the "coursera_rprogram_ass_02.R" R script.
-Lines starting with # are simple comments, lines starting with # are things printed in the output.The output coming out is also shown as a comment.
-# 1. Read the R script
-# 2. Replace the "path/to/file" with the directory you save the file into or you can read the file directly from the web source("path/to/file/coursera_rprogram_ass_02.R")
-# 3. Create a Square matrix (because `solve` only handles square matrices). Create the matrix during the call of makeCacheMatrix() function.
+ 1. Read the R script
+ 2. Replace the "path/to/file" with the directory you save the file into or you can read the file directly from the web source("path/to/file/coursera_rprogram_ass_02.R")
+ 3. Create a Square matrix (because `solve` only handles square matrices). Create the matrix during the call of makeCacheMatrix() function.
 
-# Test Cases: For Verifying the functions
+ Test Cases: For Verifying the functions
 > source("path/to/file/coursera_rprogram_ass_02.R")
 # create a square matrix (beacause `solve` function only handles square matrices )
 > my_matrix <- makeCacheMatrix(matrix(1:4, 2, 2))
 > my_matrix$get()
-#     [,1] [,2]
-# [1,]    1    3
-# [2,]    2    4
+       [,1] [,2]
+ [1,]    1    3
+ [2,]    2    4
 > my_matrix$getInverse()
-# NULL
+NULL
 > cacheSolve(my_matrix)
-#     [,1] [,2]
-# [1,]   -2  1.5
-# [2,]    1 -0.5
+       [,1] [,2]
+ [1,]   -2  1.5
+ [2,]    1 -0.5
 # The second time we run the function with same input matrix, we get the cached data
 > cacheSolve(my_matrix)
-# getting cached data
-#     [,1] [,2]
-# [1,]   -2  1.5
-# [2,]    1 -0.5
+ getting cached data
+       [,1] [,2]
+ [1,]   -2  1.5
+ [2,]    1 -0.5
 > my_matrix$getInverse()
-#     [,1] [,2]
-# [1,]   -2  1.5
-# [2,]    1 -0.5
+       [,1] [,2]
+ [1,]   -2  1.5
+ [2,]    1 -0.5
 > my_matrix$set(matrix(c(2, 2, 1, 4), 2, 2))
 > my_matrix$get()
-#     [,1] [,2]
-# [1,]    2    1
-# [2,]    2    4
+       [,1] [,2]
+ [1,]    2    1
+ [2,]    2    4
 > my_matrix$getInverse()
-# NULL
+ NULL
 > cacheSolve(my_matrix)
-#           [,1]       [,2]
-# [1,]  0.6666667 -0.1666667
-# [2,] -0.3333333  0.3333333
+           [,1]       [,2]
+ [1,]  0.6666667 -0.1666667
+ [2,] -0.3333333  0.3333333
 > cacheSolve(my_matrix)
-#getting cached data
-#           [,1]       [,2]
-# [1,]  0.6666667 -0.1666667
-# [2,] -0.3333333  0.3333333
+getting cached data
+           [,1]       [,2]
+ [1,]  0.6666667 -0.1666667
+ [2,] -0.3333333  0.3333333
 > my_matrix$getInverse()
-#           [,1]       [,2]
-# [1,]  0.6666667 -0.1666667
-# [2,] -0.3333333  0.3333333
+           [,1]       [,2]
+ [1,]  0.6666667 -0.1666667
+ [2,] -0.3333333  0.3333333
